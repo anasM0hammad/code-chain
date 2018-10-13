@@ -22,8 +22,14 @@
 
   <style type="text/css">
   .mod-margin{
+    margin-top: 50px;
+  }
+  
+  .mod-margin2{
     margin-top: 30px;
   }
+
+
   .list-group-item{
     border: 0px solid white;
     margin-left: 0px;
@@ -38,7 +44,8 @@
     margin-left: 0px;
     padding-left: 0px;
   }
-      .mod-line{
+  
+   .mod-line{
     line-height: 0.5;
   }
   .center{
@@ -46,6 +53,18 @@
    }
    .card-body{
     color: gray;
+   }
+
+
+
+   .content{
+    padding-left: 20px;
+    padding-right: 20px;
+
+   }
+
+   .likes i {
+    margin-right: 6px;
    }
 
 
@@ -69,13 +88,23 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../img/logo.png" width="27" height="27" style="border-radius: 50%;"> Mohammad Anas</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i> Profile</a>
+           <a class="dropdown-item" href="#"><i class="fas fa-envelope"></i> Messages</a>
           <a class="dropdown-item" href="#"><i class="fas fa-sliders-h"></i> Settings</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Log Out</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-globe"></i> About Us</a>
+
+       <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fas fa-globe"></i> About</a>
+      </li>
+
+       <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bell"></i> Bells</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Bell 1</a>
+          <a class="dropdown-item" href="#">Bell 2</a>
+          <a class="dropdown-item" href="#">Bell 3</a>
       </li>
     </ul>
   </div>
@@ -84,8 +113,8 @@
 
 <!-- nav ends here -->
 
-<div class="container w3-margin-top">
-  <div class="row">
+<div class=" w3-margin-top">
+  <div class="row content">
     <!-- bio and online people div start -->
     <div class="col-md-3" style="height: 600px;overflow: auto;">
       <?php lefthome();  ?>
