@@ -10,12 +10,12 @@ function lefthome()
 
 	<div class="card">
         <div class="card-header">
-          <h5 class="card-title mod-line " ><b>ANAS CHUTIA</b><i class="fa fa-edit w3-right " style="cursor: pointer;" title="Edit profile"></i></h5>
+          <h5 class="card-title mod-line " ><b>ANAS </b><i class="fa fa-edit w3-right " style="cursor: pointer;" title="Edit profile"></i></h5>
 
         </div>
         <div class="card-body">
           
-          <p class="text-muted mod-line">anas_cutia32</p>
+          <p class="text-muted mod-line">anas_123</p>
           <small class="card-text">"Think Twice, Code Once" Programmer | Developer | Guitarist </small>
           
         </div>
