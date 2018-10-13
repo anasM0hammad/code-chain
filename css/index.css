@@ -1,7 +1,42 @@
-body{
+ body{
 
    background-image: url("img/background.jpg");
-   background-position: center;
+   background-position: top;
    background-size: cover;
+   background-repeat: no-repeat;
+  
 
 }
+
+.content{
+  color: white;
+  font-style: italic;
+  padding: 40px; 
+}
+
+.content h2 {
+  margin-top: 5px;
+}
+
+form{
+    color: #36474F;
+}
+
+.reg_option{
+    cursor: pointer;
+}
+
+.reg_option:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+
+#login_option{
+  color: #E9ECEF;
+}
+
+#sign_option{
+    text-decoration: underline;
+}
+
