@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>Code Chain | Home</title>
-  <?php include "../common/common-code.php" ;
+  <?php 
+      include "../common/common-code.php" ;
       topHeader() ;
    ?>
 
@@ -56,9 +57,8 @@
 
 
   </style>
-
+ 
 </head>
-<?php include 'code/inc.home.php'; ?>
 <body>
 <!-- nav here -->
 
@@ -99,24 +99,6 @@
 
 <!-- nav ends here -->
 
-<div class=" w3-margin-top">
-  <div class="row content">
-    <!-- bio and online people div start -->
-    <div class="col-md-3" style="height: 600px;overflow: auto;">
-      <?php lefthome();  ?>
-    </div>
-
-
-    <!-- bio ends here -->
-    <div class="col-md-9" style="height: 600px;overflow:auto;">
-   
-      <?php righthome(); ?>
-
-    </div>
-  </div>
-</div>
-
-</script>
 
 </body>
 </html>

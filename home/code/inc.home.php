@@ -32,6 +32,18 @@ function lefthome()
                     <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
                     <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
                     <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+                    <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
                     
                     
                   </ul>
@@ -66,7 +78,7 @@ function righthome(){ ?>
 	 <div class="row mod-margin2">
 
         <div class="col-1">
-          <img src="../img/anas.jpeg" width="100%;">
+          <img src="../img/anas.jpeg" width="100%;" data-trigger="hover" data-toggle="popover"  title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">
         </div>
         <div class="col-11">
           <p><b>Mohammad anas</b> start following <b>modkhalid</b><span style="color: lightgray;"><small> 4 hours ago</small></span></p>
