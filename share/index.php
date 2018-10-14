@@ -1,60 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Code Chain | Home</title>
+	<title>Code Chat</title>
   <?php 
       include "../common/common-code.php" ;
       topHeader() ;
    ?>
 
   <style type="text/css">
-  .mod-margin{
-    margin-top: 50px;
-  }
   
-  .mod-margin2{
-    margin-top: 30px;
-  }
+    .friend-box{
+      border:none;
+    }
+     .friend-box li{
+      border:none;
+    }
 
 
-  .list-group-item{
-    border: 0px solid white;
-    margin-left: 0px;
-    padding-left: 0px;
-    cursor: pointer;
-  }
-  .mod-underlin{
-    text-decoration: underline;
-  }
+   .friend-box i {
+      font-size: 10px;
+    }
 
-  .list-group{
-    margin-left: 0px;
-    padding-left: 0px;
-  }
-  
-   .mod-line{
-    line-height: 0.5;
-  }
-  .center{
-      text-align: center;
+    .margin{
+      margin-top: 30px;
+    }
+
+    .chat-box{
+      margin-top: 50px;
+      margin-right: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+    }
+
+    .card-header b {
+      cursor: pointer;
+    }
+
+    #chat_body{
+        height: 468px;
+        display: none;
+    }
+
+   .chat-contain{
+    position: relative;
    }
-   .card-body{
-    color: gray;
-   }
-
-
-
-   .content{
-    padding-left: 20px;
-    padding-right: 20px;
-
-   }
-
-   .likes i {
-    margin-right: 6px;
-   }
-
-
 
   </style>
  
@@ -62,7 +53,7 @@
 <body>
 <!-- nav here -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <a class="navbar-brand" href="index.php"><img src="../img/logo.png" width="30" height="30"> Code Chain</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -99,6 +90,63 @@
 
 <!-- nav ends here -->
 
+
+<div class="row" style="height: 560px;">
+  <!-- ONLINE FRIENDS BOX -->
+
+  <div class="col-md-2 margin ">
+     <div class="card friend-box">
+      <div class="card-header friend-box" style="color: blue;"><b>Online Friends</b></div>
+       <ul class="list-group friend-box" >
+          <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+          <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+          <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+          <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+          <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+          <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+          <li class="list-group-item"><img src="../img/logo.png" height="24" width="24"> Mohd khalid<i class="fa fa-circle w3-right text-success"></i></li>
+          
+       </ul>
+    </div>
+  </div>
+  
+ 
+  <!-- MAIN TEXT EDITOR PAGE -->
+  <div class="col-md-7">
+    
+  </div>
+
+  <!-- CHAT BOX PAGE -->
+  <div class="col-md-3 chat-contain">
+    <div class="card chat-box ">
+    <div class="card-header"><b id="name_bar"><img src="../img/logo.png" height="24" width="24"> Zainul Abedin</b></div>
+    <div class="card-body" id="chat_body">
+      
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+   var name_bar = document.querySelector("#name_bar") ;
+   var chat_body = document.querySelector("#chat_body") ;
+
+   name_bar.onclick = function(){
+    if(chat_body.style.height > "100px;"){    //CHATBOX IS OPEN
+       chat_body.style.height = "0px" ;
+
+    }
+
+    else{                              //CHAT BOX IS CLOSED
+       chat_body.style.height = "468px";
+    }
+
+
+   }
+
+
+</script>
 
 </body>
 </html>
