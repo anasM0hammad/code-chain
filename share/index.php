@@ -119,9 +119,15 @@
   <!-- CHAT BOX PAGE -->
   <div class="col-md-3 chat-contain">
     <div class="card chat-box ">
-    <div class="card-header"><b id="name_bar"><img src="../img/logo.png" height="24" width="24"> Zainul Abedin</b></div>
+    <div class="card-header"><b id="name_bar"><img src="../img/logo.png" height="24" width="24"> Zainul Abedin</b> <i class="fas fa-phone float-right"></i></div>
     <div class="card-body" id="chat_body">
-      
+      <!-- CHAT WRITING FORM -->
+      <form class="form-inline" style=": 300px;">
+      <div class="form-group mx-sm-3 mb-2">
+        <input type="text" class="form-control">
+      </div>
+      <h1 ><a href=""><i class="fas fa-chevron-circle-right" style="margin-bottom: 8px;"></i></a></h1>
+    </form>
     </div>
   </div>
   </div>
@@ -133,13 +139,15 @@
    var chat_body = document.querySelector("#chat_body") ;
 
    name_bar.onclick = function(){
-    if(chat_body.style.height > "100px;"){    //CHATBOX IS OPEN
-       chat_body.style.height = "0px" ;
+    if(chat_body.style.display == "none"){    //CHATBOX IS OPEN
+       chat_body.style.display = "inherit" ;
+       chat_body.style.transition = "display 4s";
 
     }
 
     else{                              //CHAT BOX IS CLOSED
-       chat_body.style.height = "468px";
+        chat_body.style.display = "none"; ;
+         chat_body.style.transition = "display 4s";
     }
 
 
