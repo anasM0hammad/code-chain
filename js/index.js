@@ -47,4 +47,68 @@ login.onclick = function(){
 
 
 
-// VALIDATION OF THE FORM
+// VALIDATION OF THE SIGNUP FORM
+
+  
+    const sign_button = document.querySelector("#sign_button");
+    const firstname = document.querySelector("#firstname");
+    const lastname = document.querySelector("#lastname");
+    const email = document.querySelector("#email");
+    const password = document.querySelector("#password");
+    const username = document.querySelector("#username");
+     const formcontrol = document.querySelector(".form-control");
+
+    var flag = 0 ;
+
+
+     var valid_signup = function(){
+
+      if(firstname.value == ""){
+        firstname.style.borderColor = "#DC3545"; flag = 1 ;
+      }
+      else{
+         firstname.style.borderColor = "#CED4DA";
+         }
+      
+      if(lastname.value == ""){
+        lastname.style.borderColor = "#DC3545";   flag = 1 ;
+      }
+      else{
+         lastname.style.borderColor = "#CED4DA";
+        }
+
+
+      if(email.value==""){
+        email.style.borderColor = "#DC3545" ;   flag = 1;
+      }
+      else
+        email.style.borderColor = "#CED4DA" ; 
+
+
+      if(password.value == ""){
+         password.style.borderColor = "#DC3545"; flag = 1;
+       }
+       else{
+         password.style.borderColor = "#CED4DA";
+       }
+
+      if(username.value == ""){
+         username.style.borderColor = "#DC3545"; flag = 1 ;
+       }
+       else{
+         username.style.borderColor = "#CED4DA";
+       }
+
+         
+
+     if(flag){
+      return false ;
+    }
+
+    else{
+     return true ;
+    }
+  }
+
+
+  // VALIDATION OF LOGIN FORM

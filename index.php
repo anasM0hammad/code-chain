@@ -107,9 +107,9 @@ form{
 
 
        <!-- SIGN UP FORM -->
-        <div class="card flipInY animated" id="sign_form" onsubmit="return valid()">
+        <div class="card flipInY animated" id="sign_form">
         <div class="card-body">
-          <form method="post" action="" id="from" >
+          <form method="post" action="common/signup.php" id="from"  onsubmit="return valid_signup()"  >
               
               <div class="row">
                 <div class="form-group col-md-6 ">
@@ -147,15 +147,15 @@ form{
        <!-- LOGIN FORM -->
         <div class="card flipInY animated" id="login_form" style="display: none;">
         <div class="card-body">
-          <form method="post" action="common/login.php" >
+          <form method="post" action="common/login.php" onsubmit="return valid_login()">
               
                 <div class="form-group ">
                     <label for="username"><b>Username</b></label>
-                  <input type="text" class="form-control" name="login_username">
+                  <input type="text" class="form-control" name="login_username" id="username_l">
                 </div>
                 <div class="form-group ">
                   <label><b>Password</b></label>
-                  <input type="password" class="form-control" name="login_password">
+                  <input type="password" class="form-control" name="login_password" id="password_l">
                 </div>
                 <br>
                 <div class="form-group form-check">
@@ -178,8 +178,42 @@ form{
 
     <script type="text/javascript">
       
-    
-    const sign_button = document.querySelector("#sign_button");
+    const login_button = document.querySelector("#sign_button");
+    const username_l = document.querySelector("#username_l");
+    const password_l = document.querySelector("#password_l");
+
+    var flag_l = 0;
+
+    var valid_login = function(){
+
+      if(password_l.value == ""){
+         password_l.style.borderColor = "#DC3545"; flag_l = 1;
+       }
+       else{
+         password_l.style.borderColor = "#CED4DA";
+       }
+
+      if(username_l.value == ""){
+         username_l.style.borderColor = "#DC3545"; flag_l = 1 ;
+       }
+       else{
+         username_l.style.borderColor = "#CED4DA";
+       }
+
+
+     if(flag_l){
+      return false ;
+    }
+
+    else{
+     return true ;
+    }
+
+}
+
+
+//VALIDATION OF SIGNUP FORM
+ const sign_button = document.querySelector("#sign_button");
     const firstname = document.querySelector("#firstname");
     const lastname = document.querySelector("#lastname");
     const email = document.querySelector("#email");
@@ -190,7 +224,7 @@ form{
     var flag = 0 ;
 
 
-     var valid = function(){
+     var valid_signup = function(){
 
       if(firstname.value == ""){
         firstname.style.borderColor = "#DC3545"; flag = 1 ;
