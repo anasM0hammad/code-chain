@@ -44,3 +44,7 @@ login.onclick = function(){
 
 
 }
+
+
+
+// VALIDATION OF THE FORM

@@ -1,4 +1,7 @@
 <?php
+
+ob_start() ;
+
 function topHeader(){
 	?>
 

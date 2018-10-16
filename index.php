@@ -62,10 +62,12 @@ form{
     text-decoration: underline;
 }
 
-
-
-
   </style>
+
+
+
+
+
 
     <title>Code Chain</title>
   </head>
@@ -88,7 +90,8 @@ form{
 
          <div class="row" style="text-align: center;" >
                 
-            
+
+
              <!-- SIGN UP OPTION -->    
              <div class="col-sm-6" >
                 <p class="reg_option" id="sign_option"><b>Sign Up</b></p>              
@@ -104,39 +107,39 @@ form{
 
 
        <!-- SIGN UP FORM -->
-        <div class="card flipInY animated" id="sign_form" >
+        <div class="card flipInY animated" id="sign_form" onsubmit="return valid()">
         <div class="card-body">
-          <form method="post" action="common/signup.php" enctype="multipart/form-data">
+          <form method="post" action="" id="from" >
               
               <div class="row">
                 <div class="form-group col-md-6 ">
                     <label for="firstname"><b>First Name</b></label>
-                  <input type="text" class="form-control" name="firstname">
+                  <input type="text" class="form-control" name="firstname" id="firstname">
                 </div>
                 <div class="form-group col-md-6 ">
                   <label><b>Last Name</b></label>
-                  <input type="text" class="form-control" name="lastname">
+                  <input type="text" class="form-control" name="lastname" id="lastname">
                 </div>
               </div>
 
              
                 <div class="form-group ">
                     <label for="email"><b>Email</b></label>
-                  <input type="email" class="form-control"  name="email">
+                  <input type="email" class="form-control"  name="email" id="email">
                 </div>
                 <div class="form-group ">
                   <label><b>Password</b></label>
-                  <input type="password" class="form-control" name="password">
+                  <input type="password" class="form-control" name="password" id="password">
                 </div>
               
                
                 <div class="form-group ">
                     <label for="username"><b>Username</b></label>
-                  <input type="text" class="form-control" name="username">
+                  <input type="text" class="form-control" name="username" id="username">
                 </div>
                <br> 
               
-              <button type="submit" class="btn btn-primary btn-sm btn-block" name="signup">Sign Up</button>
+              <button type="submit" class="btn btn-primary btn-sm btn-block" name="signup" id="sign_button" >Sign Up</button>
             </form>
         </div>
        </div>
@@ -172,6 +175,74 @@ form{
 
       </div>
     </div>
+
+    <script type="text/javascript">
+      
+    
+    const sign_button = document.querySelector("#sign_button");
+    const firstname = document.querySelector("#firstname");
+    const lastname = document.querySelector("#lastname");
+    const email = document.querySelector("#email");
+    const password = document.querySelector("#password");
+    const username = document.querySelector("#username");
+     const formcontrol = document.querySelector(".form-control");
+
+    var flag = 0 ;
+
+
+     var valid = function(){
+
+      if(firstname.value == ""){
+        firstname.style.borderColor = "#DC3545"; flag = 1 ;
+      }
+      else{
+         firstname.style.borderColor = "#CED4DA";
+         }
+      
+      if(lastname.value == ""){
+        lastname.style.borderColor = "#DC3545";   flag = 1 ;
+      }
+      else{
+         lastname.style.borderColor = "#CED4DA";
+        }
+
+
+      if(email.value==""){
+        email.style.borderColor = "#DC3545" ;   flag = 1;
+      }
+      else
+        email.style.borderColor = "#CED4DA" ; 
+
+
+      if(password.value == ""){
+         password.style.borderColor = "#DC3545"; flag = 1;
+       }
+       else{
+         password.style.borderColor = "#CED4DA";
+       }
+
+      if(username.value == ""){
+         username.style.borderColor = "#DC3545"; flag = 1 ;
+       }
+       else{
+         username.style.borderColor = "#CED4DA";
+       }
+
+         
+
+     if(flag){
+      return false ;
+    }
+
+    else{
+     return true ;
+    }
+  }
+
+
+
+
+    </script>
    
    <script type="text/javascript" src="./js/index.js"></script>
 

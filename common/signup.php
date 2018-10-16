@@ -2,17 +2,19 @@
 
 include "connection.php" ;
 
-echo "Page";
+
+// QUERY TO SIGNUP 
 
 if(isset($_POST['signup'])){
 
- echo "Hello";
 
   $modl29_firstname = $_POST['firstname'];
   $modl29_lastname = $_POST['lastname'] ;
   $modl29_username = $_POST['username'] ;
   $modl29_password = $_POST['password'] ;
   $modl29_email = $_POST['email'] ;
+
+
 
   $modl29_firstname = mysqli_real_escape_string($conn , $modl29_firstname) ;
   $modl29_lastname = mysqli_real_escape_string($conn , $modl29_lastname) ;
@@ -37,8 +39,11 @@ if(isset($_POST['signup'])){
 
 
 
+}  // POST END
 
-}
+
+
+// SCRIPT TO VALIDATE UNIQUE EMAIL
 
 
 
