@@ -79,7 +79,7 @@ form{
       <!-- DESCRIPTION -->
       <div class="col-sm-8" >
         <img src="img/logo.png" height="150" width="150"  >
-         <h2>Code Chain</h2><br>
+         <h2 id="head">Code Chain</h2><br>
         <p>A Real Time code Sharing Website with easy to <br> use User Interface. Code Chain is a Unique Web <br> Application  help you to code  with your friends <br> on the same  compiler with real time screen sharing.</p>
 
       </div>
@@ -135,7 +135,7 @@ form{
                
                 <div class="form-group ">
                     <label for="username"><b>Username</b></label>
-                  <input type="text" class="form-control" name="username" id="username">
+                  <input type="text" class="form-control" name="username" id="username"  onkeyup="check()">
                 </div>
                <br> 
               
@@ -176,109 +176,52 @@ form{
       </div>
     </div>
 
+    
+
     <script type="text/javascript">
-      
-    const login_button = document.querySelector("#sign_button");
-    const username_l = document.querySelector("#username_l");
-    const password_l = document.querySelector("#password_l");
 
-    var flag_l = 0;
+      var userCharCount = 0;
 
-    var valid_login = function(){
+       document.onkeyup = function(event){
+        
+        if(event.keyCode == 8 && userCharCount > 0)
+          userCharCount-- ;
 
-      if(password_l.value == ""){
-         password_l.style.borderColor = "#DC3545"; flag_l = 1;
-       }
-       else{
-         password_l.style.borderColor = "#CED4DA";
-       }
-
-      if(username_l.value == ""){
-         username_l.style.borderColor = "#DC3545"; flag_l = 1 ;
-       }
-       else{
-         username_l.style.borderColor = "#CED4DA";
-       }
-
-
-     if(flag_l){
-      return false ;
-    }
-
-    else{
-     return true ;
-    }
-
-}
-
-
-//VALIDATION OF SIGNUP FORM
- const sign_button = document.querySelector("#sign_button");
-    const firstname = document.querySelector("#firstname");
-    const lastname = document.querySelector("#lastname");
-    const email = document.querySelector("#email");
-    const password = document.querySelector("#password");
-    const username = document.querySelector("#username");
-     const formcontrol = document.querySelector(".form-control");
-
-    var flag = 0 ;
-
-
-     var valid_signup = function(){
-
-      if(firstname.value == ""){
-        firstname.style.borderColor = "#DC3545"; flag = 1 ;
       }
-      else{
-         firstname.style.borderColor = "#CED4DA";
-         }
-      
-      if(lastname.value == ""){
-        lastname.style.borderColor = "#DC3545";   flag = 1 ;
-      }
-      else{
-         lastname.style.borderColor = "#CED4DA";
-        }
+     
+      const checkUsername = async (username) =>{
 
+       const call = await fetch(`async/valid_username.php?username=${username}&count=${userCharCount}`) ;
 
-      if(email.value==""){
-        email.style.borderColor = "#DC3545" ;   flag = 1;
-      }
-      else
-        email.style.borderColor = "#CED4DA" ; 
+       const data = await call.json();
 
-
-      if(password.value == ""){
-         password.style.borderColor = "#DC3545"; flag = 1;
-       }
-       else{
-         password.style.borderColor = "#CED4DA";
-       }
-
-      if(username.value == ""){
-         username.style.borderColor = "#DC3545"; flag = 1 ;
-       }
-       else{
-         username.style.borderColor = "#CED4DA";
-       }
+       return {data : data} ;
 
          
+      }
 
-     if(flag){
-      return false ;
-    }
+      const check = ()=>{
+        userCharCount++ ;
+       checkUsername(username.value).then((result) => {
+          console.log(result.data);
+       })
 
-    else{
-     return true ;
-    }
-  }
+      }
+
+
+
+        
+      // $("#username").keyup( checkUsername());      
 
 
 
 
     </script>
    
-   <script type="text/javascript" src="./js/index.js"></script>
+   <script type="text/javascript" src="js/index.js"></script>
+    <!--JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

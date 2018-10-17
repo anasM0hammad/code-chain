@@ -1,4 +1,6 @@
 
+
+//ANIMATION
 var signup = document.querySelector("#sign_option") ;
 var login = document.querySelector("#login_option") ;
 
