@@ -137,6 +137,10 @@ form{
                     <label for="username"><b>Username</b></label>
                   <input type="text" class="form-control" name="username" id="username"  onkeyup="check()">
                 </div>
+
+                <div class="form-group" id="username_alert">
+                 <!-- <p id="username_alert"><span></span></p> -->
+                </div>
                <br> 
               
               <button type="submit" class="btn btn-primary btn-sm btn-block" name="signup" id="sign_button" >Sign Up</button>
@@ -180,6 +184,8 @@ form{
 
     <script type="text/javascript">
 
+     const username_alert = document.querySelector("#username_alert");
+
       var userCharCount = 0;
 
        document.onkeyup = function(event){
@@ -203,10 +209,31 @@ form{
       const check = ()=>{
         userCharCount++ ;
        checkUsername(username.value).then((result) => {
-          console.log(result.data);
+           
+           if(result.data == "false"){
+            username.style.borderColor = "#DC3545";
+
+            if(userCharCount<4)
+             username_alert.innerHTML = "<span style = 'color: #DC3545'>Username is short</span>";
+            
+            else
+              username_alert.innerHTML = `<span style = "color: #DC3545">Username is Already Taken</span>`;
+           }
+
+
+           else{
+            username.style.borderColor = "green";
+            username_alert.innerHTML = `<span style = "color: green"> Username is Available</span>`;
+           }
+   
+        console.log(result);
+
+
+
        })
 
-      }
+
+ }
 
 
 
