@@ -20,7 +20,7 @@
     margin-top: 10px;
     display: none;
   }
-/*Huge thanks to @tobiasahlin at http://tobiasahlin.com/spinkit/ */
+
 .spinner {
   margin: 100px auto 0;
   width: 70px;
@@ -111,7 +111,7 @@ if(!isset($_SESSION['MKohaanlaisd'])){
 }
 session_write_close();
 ?>
-<?php include 'code/inc.home.php'; ?>
+<?php include '../home/code/inc.home.php'; ?>
 <body>
 <!-- nav here -->
 
@@ -130,17 +130,30 @@ session_write_close();
 
     <!-- bio ends here -->
     <div class="col-md-9" style="height: 600px;overflow:auto;">
-   
-      <?php righthome(); ?>
+  
+      <h2 style="text-align: center;"><b><i class="far fa-clipboard"></i> Write Anything You Want..</b></h2> 
+      <hr>
+      <form class="container">
+        <div class="form-group">
+        <label for="title"><b>Post Title</b></label>
+        <input type="text" class="form-control">
+      </div>
 
-     
+        <div class="form-group">
+          <label for="post Editor"><b>Start Writing Here</b></label>
+          <textarea class="form-control" id="editor" rows="9"></textarea>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-lg btn-block" style="border-radius: 0"><i class="far fa-paper-plane"></i> Add Post</button>
+
+      </form>   
+   
+
+
 
     </div>
   </div>
 </div>
-<!-- PLUS IMAGE TO ADD POST -->
-<a href="../post_editor/index.php"><p style="position: absolute; bottom: 20px ; right: 50px ;" ><img src="../img/plus.png" height="70" width="70"></p></a>
-
 
 </body>
 
