@@ -1,6 +1,6 @@
 <?php 
 
-include "conncetion.php" ;
+include "connection.php" ;
 
 if(isset($_POST['post_submit'])){
 
@@ -10,16 +10,16 @@ if(isset($_POST['post_submit'])){
  session_start();
  $userid = $_SESSION['MKohaanlaisd'];
 
- $userid = getid($userId) ;
+ $userid = getid($userid) ;
 
 
  if(empty($title) || empty($content)){
-
+    header("Location: ../post_editor/index.php?post_status=empty");
  }
 
  else{
 
-    $query = "INSERT INTO postmodl29 (userid , 'contents' , 'date' , title ) VALUES ($userid , '$content', now() , '$title')" ;
+    $query = "INSERT INTO postmodl29 (userid , contents , date , title ) VALUES ($userid , '$content', now() , '$title')" ;
     $result = mysqli_query($conn , $query) ;
 
     if(!$result){
