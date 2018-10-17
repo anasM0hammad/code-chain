@@ -191,7 +191,7 @@ form{
        document.onkeyup = function(event){
         
         if(event.keyCode == 8 && userCharCount > 0)
-          userCharCount-- ;
+          userCharCount = userCharCount-2 ;
 
       }
      
