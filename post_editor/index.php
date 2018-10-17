@@ -147,7 +147,7 @@ session_write_close();
           echo "<div class='alert alert-success' role='alert'><b>Your Post Added Successfully.</b></div>";
         }
          else if($_GET['post_status']=='empty'){
-          echo "<div class='alert alert-danger' role='alert'><b>Enter Requied Fields</b></div>";
+          echo "<div class='alert alert-danger' role='alert'><b>Enter Required Fields</b></div>";
          }
 
       }
