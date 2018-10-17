@@ -4,6 +4,8 @@
   <title>Code Chain | Home</title>
  <?php include '../common/common-code.php'; topHeader(); ?>
 <link rel="icon" type="image/gif" href="../img/logo.png">
+  <!-- CKEDITOR -->
+   <script src="https://cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
 
   <style type="text/css">
   #hint{
@@ -133,23 +135,45 @@ session_write_close();
   
       <h2 style="text-align: center;"><b><i class="far fa-clipboard"></i> Write Anything You Want..</b></h2> 
       <hr>
-      <form class="container">
+      <form class="container" method="post" action="../common/accept_post.php">
+
+      <!-- HANDLING GET REQUEST -->
+      <?php 
+
+      if(isset($_GET['post_status'])){
+        
+        if($_GET['post_status']=='success'){
+          echo "<div class='alert alert-danger' role='alert'><b>Your Post Added Successfully.</b></div>";
+        }
+
+      }
+
+      ?>
+
+
+
+
         <div class="form-group">
         <label for="title"><b>Post Title</b></label>
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" name="title"> 
       </div>
 
         <div class="form-group">
           <label for="post Editor"><b>Start Writing Here</b></label>
-          <textarea class="form-control" id="editor" rows="9"></textarea>
+          <textarea class="form-control" id="editor" rows="7" name="content"></textarea>
         </div>
 
-        <button type="button" class="btn btn-primary btn-lg btn-block" style="border-radius: 0"><i class="far fa-paper-plane"></i> Add Post</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" style="border-radius: 0" name="post_submit"><i class="far fa-paper-plane"></i> Add Post</button>
 
       </form>   
    
 
+    <script type="text/javascript">
+      
+      CKEDITOR.replace( 'content' ); 
 
+
+    </script>
 
     </div>
   </div>

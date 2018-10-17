@@ -94,6 +94,9 @@
    .likes i {
     margin-right: 6px;
    }
+
+
+   
    /*.search-bar:hover{
     width: 50%;
    }*/
