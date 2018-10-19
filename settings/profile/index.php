@@ -3,6 +3,7 @@
 <head>
 	<title>Settings | profile</title>
 	<?php include '../../common/common-code.php';
+	   
 	topHeaderInner();
 	include 'code/inc.profile.php';
 	?>
