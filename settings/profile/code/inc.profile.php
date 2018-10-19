@@ -8,7 +8,7 @@
 			</div>
 			<div class="col-md-8" style="text-align: center;margin-top: 35px;">
 				<!-- <h1>hello mod khaud</h1> -->
-				<div class="w3-card-2 btn-group">
+				<!-- <div class="w3-card-2 btn-group">
 					<button type="button" class="btn btn-white">Apple</button>
 					  <button type="button" class="btn btn-white">Samsung</button>
 					  <button type="button" class="btn btn-white">Sony</button>
@@ -19,7 +19,31 @@
 					  <button type="button" class="btn btn-white">Samsung</button>
 					  <button type="button" class="btn btn-white">Sony</button>
 
-				</div>
+				</div> -->
+
+				<nav class="navbar navbar-expand-lg bg-secondary  topitem">
+				  
+				    <ul class="navbar-nav container justify-content-center">
+				      <li class="nav-item active">
+				        <a class="nav-link" href="#"><b><i class="fas fa-user-plus"></i></b></a>
+				      </li>
+				      <li class="nav-item ">
+				        <a class="nav-link" href="#"><b><i class="fas fa-cog"></i></b></a>
+				      </li>
+				       <li class="nav-item ">
+				        <a class="nav-link" href="#"><b><i class="fas fa-user-circle"></i></b></a>
+				      </li>
+				      <li class="nav-item ">
+				        <a class="nav-link" href="#"><b><i class="fas fa-user-friends"></i></b></a>
+				      </li>
+				    </ul>
+				   
+				</nav>
+
+
+
+
+
 			</div>
 			<div class="col-md-2">
 				
