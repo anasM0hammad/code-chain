@@ -31,7 +31,7 @@
 				        <a class="nav-link" href="#"><b><i class="fas fa-cog"></i></b></a>
 				      </li>
 				       <li class="nav-item ">
-				        <a class="nav-link" href="#"><b><i class="fas fa-user-circle"></i></b></a>
+				        <a class="nav-link" href="../bio/"><b><i class="fas fa-user-circle"></i></b></a>
 				      </li>
 				      <li class="nav-item ">
 				        <a class="nav-link" href="#"><b><i class="fas fa-user-friends"></i></b></a>
@@ -182,9 +182,9 @@
 
 					<br><br><br><br><br><br>
 
-					<button class="btn btn-success btn-lg mx-auto d-block" style="width: 50%; border-radius: 0;"><i class="fab fa-github"></i> Connect</button>
+					<button class="btn btn-success btn-lg mx-auto d-block" style="width: 50%; border-radius: 0;"><i class="fab fa-github"></i><span class="w3-hide-small"> Connect</span></button>
 					<br>
-					<button class="btn btn-primary btn-lg mx-auto d-block" style="width: 50%; border-radius: 0;"><i class="fab fa-linkedin"></i> Connect</button>
+					<button class="btn btn-primary btn-lg mx-auto d-block" style="width: 50%; border-radius: 0;"><i class="fab fa-linkedin"></i> <span class="w3-hide-small"> Connect</span></button>
 
 
 
