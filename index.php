@@ -10,6 +10,8 @@
    
    <!-- EXTERNAL CSS FILE -->
   <link rel="stylesheet" type="text/css" href="./css/index.css">
+    
+    <title>Hacktoberfest</title>
 
    <!-- LOGO -->
    <link rel="icon" type="image/gif" href="img/logo.png">
